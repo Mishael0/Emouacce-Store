@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ShoppingCart, User } from 'lucide-react';
 
@@ -100,13 +101,12 @@ function MobileMenu({ isOpen, onClose, categories, links }) {
                      <ul className="ml-8 space-y-2.5">
                        {category.items.map((item) => (
                          <li key={item.name}>
-                           <a
-                             href={item.href}
+                           <Link to={item.href}
                              onClick={onClose}
                              className="text-sm text-gray-600 hover:text-gray-950 font-medium inline-block transition-colors"
                            >
                              {item.name}
-                           </a>
+                           </Link>
                          </li>
                        ))}
                      </ul>

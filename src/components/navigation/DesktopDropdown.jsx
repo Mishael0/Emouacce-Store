@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useRef } from "react";
 
 function DesktopDropdown({ isOpen, onClose, categories }) {
@@ -26,14 +27,14 @@ function DesktopDropdown({ isOpen, onClose, categories }) {
                   </h3>
                   <ul className="space-y-2">
                     {category.items.map((item) => (
-                      <li key={item.name}>
-                        <a
-                          href={item.href}
+                      <li key={item.slug}>
+                        <Link
+                          to={`/products/${category.slug}/${item.slug}`}
                           className="text-sm text-gray-600 hover:text-gray-900 hover:translate-x-1 inline-block transition-all duration-200"
                           role="menuitem"
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -41,15 +42,7 @@ function DesktopDropdown({ isOpen, onClose, categories }) {
               );
             })}
           </div>
-          <div className="mt-6 pt-6 border-t border-gray-100">
-            <a
-              href="/shop/all"
-              className="text-gray-500 hover:text-gray-950 font-medium inline-flex items-center gap-2 group"
-            >
-              View All Categories
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
+          
         </div>
       </div>
     );

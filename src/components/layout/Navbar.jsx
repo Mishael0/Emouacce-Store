@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
 import { ShoppingCart, Heart, User, Menu, Search, X } from 'lucide-react';
-import Logo from './Logo';
-import DesktopDropdown from './DesktopDropdown';
-import DesktopMenu from './DesktopMenu';
-import MobileMenu from './MobileMenu';
-import SearchOverlay from './SearchOverlay';
-import { navigationData } from '../data/categories';
+import Logo from '../navigation/Logo';
+import DesktopDropdown from '../navigation/DesktopDropdown';
+import DesktopMenu from '../navigation/DesktopMenu';
+import MobileMenu from '../navigation/MobileMenu';
+import SearchOverlay from '../navigation/SearchOverlay';
+import { navigationData } from '../../data/categories';
 
 function Navbar() {
 
@@ -67,8 +68,8 @@ useEffect(() => {
 
 
   return (
-    <header ref={navRef} className="sticky w-full top-0 z-50 bg-transparent shadow-md pb-3">
-        <div className="max-w-7xl mx-auto p-4 flex justify-between items-center">
+    <header ref={navRef} className="sticky w-full top-0 z-50 bg-white shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-5">
           <div className='h-16 flex items-center gap-2'>
             <button
               onClick={handleMobileToggle}
@@ -80,7 +81,7 @@ useEffect(() => {
             </button>
             
             <Logo className='w-12 h-12'/>
-            <h1 className="text-[#413615] text-[1.2rem] sm:text-2xl md:text-3xl font-extrabold tracking-[0.07em]">EMOUACCE</h1>
+           <Link to="/"> <h1 className="text-[#413615] text-[1.1rem] sm:text-2xl md:text-2xl font-extrabold tracking-[0.07em]">EMOUACCE</h1></Link>
         </div>
 
          <DesktopMenu
@@ -103,31 +104,31 @@ useEffect(() => {
         </div>
           
           <div className='relative group'>
-             <button>
+             <Link>
               <User size={23} 
               strokeWidth={2}
               className='text-gray-900 hover:text-gray-700 hover:scale-110'/>
-            </button>
+            </Link>
             <div className='absolute hidden group-hover:block group-focus-within:block text-[#413615] font-bold text-xs py-2 px-4 rounded-md top-1/2 left-1/2 transform -translate-x-1/2 mb-2'>
               Login
             </div>
           </div>
             <div className='relative group'>
-             <button>
+             <Link>
               <Heart size={23} 
               strokeWidth={2}
               className='text-gray-900 hover:text-yellow-600 hover:scale-110'/>
-             </button>
+             </Link>
              <div className='absolute hidden group-hover:block group-focus-within:block text-[#413615] font-bold text-xs py-2 px-4 rounded-md top-1/2 left-1/2 transform -translate-x-1/2 mb-2'>
               Wishlist
             </div>
              </div>
              <div className='relative group'>
-              <button>
+              <Link to="/cart">
               <ShoppingCart size={23} 
               strokeWidth={2}
               className='text-gray-900 hover:text-gray-700  hover:scale-110'/>
-               </button>
+               </Link>
              <div className='absolute hidden group-hover:block group-focus-within:block text-[#413615] font-bold text-xs py-2 px-4 rounded-md top-1/2 left-1/2 transform -translate-x-1/2 mb-2'>
               Cart
             </div>

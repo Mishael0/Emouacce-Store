@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 
 function DesktopMenu({ onShopHover, isShopOpen, links }) {
@@ -29,9 +29,9 @@ function DesktopMenu({ onShopHover, isShopOpen, links }) {
        {links.map((link) => {
          const LinkIcon = link.icon;
          return (
-           <a
+           <Link
              key={link.name}
-             href={link.href}
+             to={link.href}
              className={`flex items-center gap-1.5 font-medium transition-colors ${
                link.highlight 
                  ? 'text-orange-600 hover:text-orange-700' 
@@ -40,7 +40,7 @@ function DesktopMenu({ onShopHover, isShopOpen, links }) {
            >
              {LinkIcon && <LinkIcon size={16} />}
              {link.name}
-           </a>
+           </Link>
          );
        })}
      </nav>
