@@ -5,29 +5,36 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import DealsPage from "./pages/DealsPage";
-
+import SearchResultsPage from "./pages/SearchResultsPage";
+import AllProductsPage from "./pages/AllProductsPage"; 
+import WishlistPage from "./pages/WishlistPage";
 
 function App() {
-
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/deals" element={<DealsPage />} />
+         <Route path="/wishlist" element={<WishlistPage />} />
 
-          <Route path="/deals" element={<DealsPage />} />
-
-          <Route path="/products/:category" element={<CategoryPage />} />
-
-            <Route path="/products/:category/:subCategory" element={<CategoryPage />} />
-
-             <Route path="/products/:category/:subcategory/:productId" element={<ProductDetailPage />} />
-
-              <Route path="*" element={<h1>404 - Page Not Found</h1>} />
-        </Routes>
+        {/* Search Route */}
+        <Route path="/search" element={<SearchResultsPage />} />
+        
+        {/* All Products Route */}
+        <Route path="/products/all" element={<AllProductsPage />} />
+        
+        {/* Category Routes */}
+        <Route path="/products/:category" element={<CategoryPage />} />
+        <Route path="/products/:category/:subcategory" element={<CategoryPage />} />
+        <Route path="/products/:category/:subcategory/:productId" element={<ProductDetailPage />} />
+        
+        {/* 404 */}
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

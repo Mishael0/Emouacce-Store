@@ -16,7 +16,7 @@ function Newsletter() {
          }
        };
   return (
-    <section className="py-10 px-6 bg-stone-500">
+    <section className="py-10 px-6 bg-stone-900">
           
           <div className="max-w-4xl mx-auto">
             

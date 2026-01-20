@@ -34,7 +34,7 @@ function Features() {
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-600">
+                <p className="text-gray-700">
                   {feature.description}
                 </p>
               </div>

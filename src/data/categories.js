@@ -14,8 +14,8 @@ export const navigationData = {
       image: electronics,
       items: [
         { name: 'Laptops', slug: 'laptops', href: '/products/electronics/laptops' },
-        { name: 'Smartphones & Tablets',   slug: 'smartphones-tablets', href: '/products/electronics/smartphones & tablets' },
-        { name: 'Audio & Headphones', slug: 'audio & headphones', href: '/products/electronics/audio & headphones' },
+        { name: 'Smartphones & Tablets', slug: 'smartphones-tablets', href: '/products/electronics/smartphones-tablets' },
+        { name: 'Audio & Headphones', slug: 'audio-headphones', href: '/products/electronics/audio-headphones' },
         { name: 'Cameras', slug: 'cameras', href: '/products/electronics/cameras' }
       ]
     },
@@ -24,38 +24,38 @@ export const navigationData = {
       name: 'Fashion',
       icon: Shirt,
       slug: 'fashion',
-       image: fashion,
+      image: fashion,
       items: [
-        { name: 'Men\'s Clothing',  slug: 'mens-clothing', href: '/products/fashion/mens' },
-        { name: 'Women\'s Clothing', slug: 'womens-clothing', href: '/products/fashion/womens' },
-        { name: 'Shoes',  slug: 'shoes', href: '/products/fashion/shoes' },
-        { name: 'Accessories',  slug: 'accessories', href: '/products/fashion/accessories' }
+        { name: "Men's Clothing", slug: 'mens-clothing', href: '/products/fashion/mens-clothing' },
+        { name: "Women's Clothing", slug: 'womens-clothing', href: '/products/fashion/womens-clothing' },
+        { name: 'Shoes', slug: 'shoes', href: '/products/fashion/shoes' },
+        { name: 'Accessories', slug: 'accessories', href: '/products/fashion/accessories' }
       ]
     },
     {
       id: 'home',
       name: 'Home & Living',
       icon: Home,
-       slug: 'Home-Living',
-        image: living,
+      slug: 'home-living',
+      image: living,
       items: [
-        { name: 'Furniture',  slug: 'furniture', href: '/products/home/furniture' },
-        { name: 'Decor', slug: 'decor', href: '/products/Home & Living/decor' },
-        { name: 'Kitchen', slug: 'kitchen', href: '/products/Home & Living/kitchen' },
-        { name: 'Bedding', slug: 'bedding', href: '/products/Home & Living/bedding' }
+        { name: 'Living Room', slug: 'living-room', href: '/products/home-living/living-room' },
+        { name: 'Bedroom', slug: 'bedroom', href: '/products/home-living/bedroom' },
+        { name: 'Office', slug: 'office', href: '/products/home-living/office' },
+        { name: 'Outdoor', slug: 'outdoor', href: '/products/home-living/outdoor' }
       ]
     },
     {
       id: 'sports',
       name: 'Sports & Outdoors',
       icon: Dumbbell,
-      slug: 'Sports-Outdoors',
-       image: outdoor,
+      slug: 'sports-outdoors',
+      image: outdoor,
       items: [
-        { name: 'Exercise Equipment', slug: 'exercise equipment', href: '/products/Sports & Outdoors/exercise' },
-        { name: 'Outdoor Gear', slug: 'outdoor gear', href: '/products/Sports & Outdoors/outdoor' },
-        { name: 'Sportswear', slug: 'Sports-Outdoors', href: '/products/Sports & Outdoors/wear' },
-        { name: 'Camping', slug: 'camping', href: '/products/Sports & Outdoors/camping' }
+        { name: 'Camping', slug: 'camping', href: '/products/sports-outdoors/camping' },
+        { name: 'Fitness', slug: 'fitness', href: '/products/sports-outdoors/fitness' },
+        { name: 'Cycling', slug: 'cycling', href: '/products/sports-outdoors/cycling' },
+        { name: 'Water Sports', slug: 'water-sports', href: '/products/sports-outdoors/water-sports' }
       ]
     }
   ],

@@ -30,7 +30,7 @@ function Hero() {
       setCurrentSlide(index);
     };
   
-    // Touch handlers for mobile swipe
+  
     const handleTouchStart = (e) => {
       touchStartX.current = e.touches[0].clientX;
     };
@@ -64,7 +64,7 @@ function Hero() {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Background Images with key prop for proper rendering */}
+       
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -82,7 +82,6 @@ function Hero() {
           </div>
         ))}
   
-        {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
           className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-2 md:p-3 rounded-full transition-all duration-300 shadow-lg"
@@ -101,7 +100,6 @@ function Hero() {
           <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-black" />
         </button>
   
-        {/* Content - Bottom Positioned (Nike Style) - Reduced Text Sizes */}
         <div className="absolute bottom-0 left-0 right-0 z-20 pb-16 md:pb-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto flex items-end justify-center">
             <div className="text-white" key={currentSlide}>
@@ -136,7 +134,7 @@ function Hero() {
             </div>
           </div>
         </div>
-        {/* Navigation Dots */}
+
         <div className="absolute bottom-6 md:bottom-8 left-0 right-0 z-30 flex justify-center gap-2 md:gap-3">
           {slides.map((slide, index) => (
             <button
