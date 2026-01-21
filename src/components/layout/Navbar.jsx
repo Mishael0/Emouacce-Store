@@ -87,7 +87,7 @@ function Navbar() {
           
           <Logo className='w-12 h-12'/>
           <Link to="/">
-            <h1 className="text-[#413615] text-[0.9rem] sm:text-2xl md:text-2xl font-thin tracking-[0.07em]">
+            <h1 className="text-[#413615] text-[0.9rem] sm:text-2xl md:text-2xl font-light tracking-[0.07em]">
               EMOUACCE
             </h1>
           </Link>
