@@ -4,7 +4,7 @@ import philipairpro from '../assets/images/featuredproducts/philipairpro.webp';
 import Vintageshirt from '../assets/images/featuredproducts/Vintageshirt.webp';
 import Wristwatch from '../assets/images/featuredproducts/Wristwatch.webp';
 import iphone16pro from '../assets/images/featuredproducts/iphone16pro.webp';
-import jagaforce from '../assets/images/featuredproducts/jagaforce.webp';
+import Jagaforce from '../assets/images/featuredproducts/Jagaforce.webp';
 import stockPalms from '../assets/images/featuredproducts/stockPalms.webp';
 import casual from '../assets/images/categoryPage/casual.png';
 import Boot from '../assets/images/products/Boot.png';
@@ -121,7 +121,7 @@ export const productItems = [
     category: "fashion",
     subcategory: "shoes",
     price: 68,
-    image: jagaforce,
+    image: Jagaforce,
     description: "A classic Air Max 270 lifestyle silhouette The upper is a structured engineered mesh for breathability.",
     brand: "Nike",
     rating: 4.7,
