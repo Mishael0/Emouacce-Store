@@ -84,7 +84,7 @@ function ProductCard({ product, variant = 'grid' }) {
           </button>
         </div>
         
-        <div className="p-4 flex flex-col  flex-1">
+        <div className="p-2 flex flex-col  flex-1">
           <Link to={`/products/${product.category}/${product.subcategory}/${product.id}`}>
             <h3 className="text-base font-bold text-gray-800 line-clamp-2 mb-2 hover:text-gray-600 min-h-[3rem]">
               {product.name}
@@ -111,7 +111,7 @@ function ProductCard({ product, variant = 'grid' }) {
             <button 
               onClick={handleAddToCart}
               disabled={!product.inStock}
-              className={`w-full py-1 rounded-lg transition-all duration-200 text-xs sm:sm font-semibold flex items-center justify-center gap-2 ${
+              className={`w-full py-1 px-3 rounded-lg transition-all duration-200 text-xs sm:sm font-semibold flex items-center justify-center gap-2 ${
                 product.inStock
                   ? addedToCart
                     ? 'bg-green-600 text-white'
