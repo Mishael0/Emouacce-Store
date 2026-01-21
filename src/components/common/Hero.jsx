@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef} from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { slides } from '../../data/slides';
+import { Link } from 'react-router-dom';
 
 function Hero() {
    const [currentSlide, setCurrentSlide] = useState(0);
@@ -118,18 +119,20 @@ function Hero() {
                 {slides[currentSlide].description}
               </p>
               <div className="flex flex-col sm:flex-row gap-2 md:gap-3 animate-fade-in">
-                <button 
+                 <Link
+                   to="/products/all"
                   className="bg-white text-black px-5 py-2 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-300 text-xs md:text-sm"
                   type="button"
                 >
                   Shop Now
-                </button>
-                <button 
+                </Link>
+                 <Link
+                  to="/deals"
                   className="bg-transparent text-white border-2 border-white px-5 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 text-xs md:text-sm"
                   type="button"
                 >
                   Explore deals
-                </button>
+                </Link>
               </div>
             </div>
           </div>

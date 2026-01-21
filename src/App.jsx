@@ -8,6 +8,9 @@ import DealsPage from "./pages/DealsPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 import AllProductsPage from "./pages/AllProductsPage"; 
 import WishlistPage from "./pages/WishlistPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import AccountPage from "./pages/AccountPage";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
 
         {/* Search Route */}
         <Route path="/search" element={<SearchResultsPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/account" element={<AccountPage />} />
         
         {/* All Products Route */}
         <Route path="/products/all" element={<AllProductsPage />} />

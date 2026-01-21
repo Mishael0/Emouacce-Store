@@ -16,9 +16,11 @@ function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const wishlistCount = useSelector((state) => state.wishlist.items.length);
- const cartCount = useSelector((state) => 
+   const cartCount = useSelector((state) => 
   state.cart.items.reduce((total, item) => total + item.quantity, 0)
-);
+  );
+  const { user, isAuthenticated } = useSelector((state) => state.auth);
+
   const searchInputRef = useRef(null);
   const navRef = useRef(null);
   const navigate = useNavigate();
@@ -85,7 +87,7 @@ function Navbar() {
           
           <Logo className='w-12 h-12'/>
           <Link to="/">
-            <h1 className="text-[#413615] text-[1.1rem] sm:text-2xl md:text-2xl font-thin tracking-[0.07em]">
+            <h1 className="text-[#413615] text-[0.9rem] sm:text-2xl md:text-2xl font-thin tracking-[0.07em]">
               EMOUACCE
             </h1>
           </Link>
@@ -104,7 +106,7 @@ function Navbar() {
               aria-label='Search'
               className='search-trigger text-gray-900 hover:text-gray-700 hover:scale-110'
             >
-              <Search size={23} strokeWidth={2} />
+              <Search size={20} strokeWidth={2} />
             </button>
             <div className='absolute hidden group-hover:block group-focus-within:block text-[#413615] font-bold text-xs py-2 px-4 rounded-md top-1/2 left-1/2 transform -translate-x-1/2 mb-2'>
               Search
@@ -112,22 +114,36 @@ function Navbar() {
           </div>
           
           <div className='relative group'>
-            <Link to="/account">
-              <User 
-                size={23} 
-                strokeWidth={2}
-                className='text-gray-900 hover:text-gray-700 hover:scale-110'
+            {isAuthenticated ? (
+          <Link to="/account" className="flex items-center gap-2">
+              <img
+                src={user.avatar}
+                alt={user.name}
+                className="w-6 h-6 rounded-full"
               />
-            </Link>
-            <div className='absolute hidden group-hover:block group-focus-within:block text-[#413615] font-bold text-xs py-2 px-4 rounded-md top-1/2 left-1/2 transform -translate-x-1/2 mb-2'>
-              Login
+              <span className="hidden md:block text-sm font-medium text-gray-900">
+                {user.name.split(' ')[0]}
+              </span>
+          </Link>
+                 ) : (
+          <Link to="/login">
+                <User 
+                  size={20} 
+                  strokeWidth={2}
+                  className='text-gray-900 hover:text-gray-700 hover:scale-110'
+                />
+          </Link>
+               )}
+        
+              <div className='absolute hidden group-hover:block group-focus-within:block text-[#413615] font-bold text-xs py-2 px-4 rounded-md top-1/2 left-1/2 transform -translate-x-1/2 mb-2'>
+               {isAuthenticated ? 'Account' : 'Login'}
             </div>
           </div>
 
           <div className='relative group'>
             <Link to="/wishlist">
               <Heart 
-                size={23} 
+                size={20} 
                 strokeWidth={2}
                 className='text-gray-900 hover:text-yellow-600 hover:scale-110'
               />
@@ -145,7 +161,7 @@ function Navbar() {
           <div className='relative group'>
             <Link to="/cart">
               <ShoppingCart 
-                size={23} 
+                size={20} 
                 strokeWidth={2}
                 className='text-gray-900 hover:text-gray-700 hover:scale-110'
               />

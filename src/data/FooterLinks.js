@@ -1,13 +1,14 @@
-import { FaFacebook, FaInstagram, X, FaYoutube} from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube} from 'react-icons/fa';
+import { X} from 'lucide-react';
 
 export const footerLinks = {
     shop: [
       { name: "New Arrivals", href: "#" },
-      { name: "Best Sellers", href: "#" },
-      { name: "Men's Fashion", href: "#" },
-      { name: "Women's Fashion", href: "#" },
-      { name: "Electronics", href: "#" },
-      { name: "Home & Living", href: "#" }
+      { name: "Best Sellers", href: "/deals" },
+      { name: "Men's Fashion", href: "/products/fashion/mens-clothing" },
+      { name: "Women's Fashion", href: "/products/fashion/womens-clothing" },
+      { name: "Electronics", href: "/products/electronics" },
+      { name: "Home & Living", href: "/products/home-living" }
     ],
     customerService: [
       { name: "Contact Us", href: "#" },
@@ -31,6 +32,6 @@ export const footerLinks = {
  export  const socialLinks = [
     { icon: FaFacebook, href: "#", label: "Facebook" },
     { icon: FaInstagram, href: "#", label: "Instagram" },
-    { icon: X, href: "#", label: "Twitter" },
+    { icon: X, href: "#", label: "X" },
     { icon: FaYoutube, href: "#", label: "YouTube" }
   ];

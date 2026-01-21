@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+       lineClamp: {
+        2: '2',
+        3: '3',
+      },
       animation: {
         'spin-slow': 'spin 15s  linear infinite',
         'pulse-soft': 'pulse-glow3s ease-in-out infinite',

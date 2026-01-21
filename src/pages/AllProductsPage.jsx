@@ -24,7 +24,7 @@ function AllProductsPage() {
   const featuredProductsOnly = useMemo(() => {
     return productItems
       .filter(product => product.featured === true)
-      .slice(30, 48);
+      .slice(9, 48);
   }, []);
 
    // Step 2: Get all available brands from these 15 featured products

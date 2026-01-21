@@ -7,6 +7,20 @@ import iphone16pro from '../assets/images/featuredproducts/iphone16pro.webp';
 import jagaforce from '../assets/images/featuredproducts/jagaforce.webp';
 import stockPalms from '../assets/images/featuredproducts/stockPalms.webp';
 import casual from '../assets/images/categoryPage/casual.png';
+import Boot from '../assets/images/products/Boot.png';
+import allbirds from '../assets/images/products/allbirds.png';
+import sneak from '../assets/images/products/sneak.png';
+import adidas from '../assets/images/products/adidas.png';
+import classic from '../assets/images/products/classic.png';
+import sweater from '../assets/images/products/sweater.jpg';
+import jacket from '../assets/images/products/jacket.png';
+import shirt from '../assets/images/products/shirt.webp';
+import blueMerch from '../assets/images/products/blueMerch.webp';
+import Jacketjean from '../assets/images/products/Jacketjean.webp';
+import teamjac from '../assets/images/products/teamjac.jpg';
+import trouser from '../assets/images/products/trouser.png';
+
+
 
 
 
@@ -120,7 +134,7 @@ export const productItems = [
     id: 8,
     name: "Two-Strap Buckle Footbed Slides",
     category: "fashion",
-    subcategory: "mens-clothing",
+    subcategory: "shoes",
     price: 28,
     image: stockPalms,
     description: "EVA-molded comfort slides featuring an adjustable double-strap design.",
@@ -595,15 +609,12 @@ export const productItems = [
   },
    {
     id: "mens-001",
-    name: "Levi's 501 Original Fit Jeans",
+    name: "Levi's 501 Original Jacket Jeans",
     category: "fashion",
     subcategory: "mens-clothing",
     price: 89.99,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500"
-    ],
+    image: Jacketjean,
     description: "Iconic straight-leg jeans with button fly, medium wash, 100% cotton denim, and timeless classic fit.",
     brand: "Levi's",
     rating: 4.7,
@@ -622,17 +633,14 @@ export const productItems = [
   },
   {
     id: "mens-002",
-    name: "Nike Dri-FIT Training T-Shirt",
+    name: "Ralph Lauren Trouser",
     category: "fashion",
     subcategory: "mens-clothing",
-    price: 34.99,
+    price: 58.99,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500"
-    ],
-    description: "Performance athletic tee with moisture-wicking Dri-FIT technology, regular fit, and swoosh logo.",
-    brand: "Nike",
+    image: trouser,
+    description: "Performance Trouser with moisture-wicking Dri-FIT technology, regular fit, and swoosh logo.",
+    brand: "Ralph Lauren",
     rating: 4.6,
     reviews: 2345,
     stock: 234,
@@ -654,10 +662,7 @@ export const productItems = [
     subcategory: "mens-clothing",
     price: 98.99,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=500"
-    ],
+    image: shirt,
     description: "Classic button-down Oxford shirt in 100% cotton, slim fit, iconic pony logo, and perfect for business casual.",
     brand: "Ralph Lauren",
     rating: 4.8,
@@ -676,15 +681,12 @@ export const productItems = [
   },
   {
     id: "mens-004",
-    name: "Patagonia Better Sweater Fleece",
+    name: "Patagonia Better Sweater",
     category: "fashion",
     subcategory: "mens-clothing",
     price: 139.99,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500"
-    ],
+    image: sweater,
     description: "Sustainable quarter-zip fleece made from recycled polyester, Fair Trade Certified, durable water repellent finish.",
     brand: "Patagonia",
     rating: 4.9,
@@ -708,10 +710,7 @@ export const productItems = [
     subcategory: "mens-clothing",
     price: 179.99,
     originalPrice: 199.99,
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500"
-    ],
+    image: jacket,
     description: "Rugged duck canvas jacket with quilted lining, triple-stitched seams, corduroy collar, and multiple tool pockets.",
     brand: "Carhartt",
     rating: 4.8,
@@ -728,17 +727,38 @@ export const productItems = [
       collar: "Corduroy-trimmed"
     }
   },
-  {
+   {
     id: "mens-006",
+    name: "High Fahion Jacket",
+    category: "fashion",
+    subcategory: "mens-clothing",
+    price: 169.99,
+    originalPrice: 179.99,
+    image: teamjac,
+    description: "Rugged duck canvas jacket, triple-stitched seams, corduroy collar, and multiple tool pockets.",
+    brand: "Carhartt",
+    rating: 4.8,
+    reviews: 5678,
+    stock: 92,
+    inStock: true,
+    featured: false,
+    specifications: {
+      material: "12-ounce firm-hand duck canvas",
+      lining: "Quilted-flannel with polyester insulation",
+      fit: "Original fit",
+      pockets: "Multiple interior and exterior",
+      durability: "Triple-stitched main seams",
+      collar: "Corduroy-trimmed"
+    }
+  },
+  {
+    id: "mens-007",
     name: "Adidas Tiro 24 Training Pants",
     category: "fashion",
     subcategory: "mens-clothing",
     price: 49.99,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500"
-    ],
+    image: blueMerch,
     description: "Athletic track pants with AEROREADY moisture management, tapered fit, ankle zips, and signature 3-stripes.",
     brand: "Adidas",
     rating: 4.7,
@@ -952,10 +972,7 @@ export const productItems = [
     subcategory: "shoes",
     price: 190.00,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500"
-    ],
+    image: adidas,
     description: "Premium running shoe with lightest Boost midsole ever, Primeknit+ upper, Continental rubber outsole, and 30% lighter design.",
     brand: "Adidas",
     rating: 4.8,
@@ -979,10 +996,7 @@ export const productItems = [
     subcategory: "shoes",
     price: 65.00,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=500"
-    ],
+    image: sneak,
     description: "Timeless high-top sneaker with canvas upper, rubber toe cap, ankle patch logo, and iconic vulcanized sole.",
     brand: "Converse",
     rating: 4.5,
@@ -1006,10 +1020,7 @@ export const productItems = [
     subcategory: "shoes",
     price: 179.99,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500"
-    ],
+    image: Boot,
     description: "Iconic 8-eye boot in smooth leather, Goodyear welt construction, AirWair sole, yellow welt stitching, and heel loop.",
     brand: "Dr. Martens",
     rating: 4.8,
@@ -1033,11 +1044,8 @@ export const productItems = [
     subcategory: "shoes",
     price: 199.99,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500"
-    ],
-    description: "Heritage running shoe made in USA with premium pigskin and mesh, FuelCell cushioning, and ENCAP midsole technology.",
+    image: classic,
+    description: "Heritage high fahion shoe made in USA with premium pigskin and mesh, FuelCell cushioning, and ENCAP midsole technology.",
     brand: "New Balance",
     rating: 4.9,
     reviews: 2345,
@@ -1060,10 +1068,7 @@ export const productItems = [
     subcategory: "shoes",
     price: 135.00,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500",
-    images: [
-      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500"
-    ],
+    image: allbirds,
     description: "Sustainable performance running shoe with eucalyptus tree fiber upper, responsive SweetFoam midsole, carbon-neutral production.",
     brand: "Allbirds",
     rating: 3.5,
