@@ -14,10 +14,10 @@ import adidas from '../assets/images/products/adidas.png';
 import classic from '../assets/images/products/classic.png';
 import sweater from '../assets/images/products/sweater.jpg';
 import jacket from '../assets/images/products/jacket.png';
-import shirt from '../assets/images/products/shirt.webp';
+import Shirt from '../assets/images/products/Shirt.webp';
 import blueMerch from '../assets/images/products/blueMerch.webp';
 import Jacketjean from '../assets/images/products/Jacketjean.webp';
-import teamjac from '../assets/images/products/teamjac.jpg';
+import teamJac from '../assets/images/products/teamJac.jpg';
 import trouser from '../assets/images/products/trouser.png';
 
 
@@ -662,7 +662,7 @@ export const productItems = [
     subcategory: "mens-clothing",
     price: 98.99,
     originalPrice: null,
-    image: shirt,
+    image: Shirt,
     description: "Classic button-down Oxford shirt in 100% cotton, slim fit, iconic pony logo, and perfect for business casual.",
     brand: "Ralph Lauren",
     rating: 4.8,
@@ -734,7 +734,7 @@ export const productItems = [
     subcategory: "mens-clothing",
     price: 169.99,
     originalPrice: 179.99,
-    image: teamjac,
+    image: teamJac,
     description: "Rugged duck canvas jacket, triple-stitched seams, corduroy collar, and multiple tool pockets.",
     brand: "Carhartt",
     rating: 4.8,
