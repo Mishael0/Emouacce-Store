@@ -6,7 +6,7 @@ function FeaturedProducts() {
   const featuredProducts = getFeaturedProducts();
   
   return (
-    <section className="py-10 px-12 sm:px-8 lg:px-4 bg-gray-50">
+    <section className="py-10 px-6 sm:px-8 lg:px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-3">
@@ -17,7 +17,7 @@ function FeaturedProducts() {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4  sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {featuredProducts.map((product) => (
             <ProductCard 
               key={product.id} 
