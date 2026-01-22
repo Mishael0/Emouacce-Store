@@ -26,7 +26,7 @@ import trouser from '../assets/images/products/trouser.png';
 
 export const productItems = [
   {
-    id: 1, 
+    id: "1", 
     name: "Vintage Abstract Cuban Collar Shirt", 
     category: "fashion",
     subcategory: "mens-clothing",
@@ -41,7 +41,7 @@ export const productItems = [
     featured: true
   },
   {
-    id: 2,
+    id: "2",
     name: "Heavyweight Streetwear Tracksuit",
     category: "fashion",
     subcategory: "mens-clothing",
@@ -56,7 +56,7 @@ export const productItems = [
     featured: true
   },
   {
-    id: 3,
+    id: "3",
     name: "Philips TAT3509 Noise Cancelling Pro Earbuds",
     category: "electronics",
     subcategory: "audio-headphones",
@@ -71,7 +71,7 @@ export const productItems = [
     featured: true
   },
   {
-    id: 4,
+    id: "4",
     name: "Nike Phantom GT2 Academy Shockwave FG/MG",
     category: "fashion",
     subcategory: "shoes",
@@ -86,7 +86,7 @@ export const productItems = [
     featured: true
   },
   {
-    id: 5,
+    id: "5",
     name: "COLMI P8 Plus / P28 Plus Smartwatch Series",
     category: "fashion",
     subcategory: "accessories",
@@ -101,7 +101,7 @@ export const productItems = [
     featured: true
   },
   {
-    id: 6,
+    id: "6",
     name: "iPhone 15 Pro (Natural Titanium (128GB))",
     category: "electronics",
     subcategory: "smartphones-tablets",
@@ -116,7 +116,7 @@ export const productItems = [
     featured: true
   },
   {
-    id: 7,
+    id: "7",
     name: "Nike Air Max 270 White Black Gold (Colorway: AH8050-100)",
     category: "fashion",
     subcategory: "shoes",
@@ -131,7 +131,7 @@ export const productItems = [
     featured: true
   },
   {
-    id: 8,
+    id: "8",
     name: "Two-Strap Buckle Footbed Slides",
     category: "fashion",
     subcategory: "shoes",

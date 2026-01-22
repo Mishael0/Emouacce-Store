@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useToast } from '../ui/ToastContext';
 import { ShoppingCart, Heart } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToWishlist, removeFromWishlist } from '../../store/wishlistSlice';
@@ -7,6 +8,7 @@ import { useState } from 'react';
 
 function ProductCard({ product, variant = 'grid' }) {
   const dispatch = useDispatch();
+  const toast = useToast();
   const wishlistItems = useSelector((state) => state.wishlist.items);
   const [addedToCart, setAddedToCart] = useState(false);
   
@@ -23,18 +25,20 @@ function ProductCard({ product, variant = 'grid' }) {
     : 0;
 
   // Handle wishlist toggle
-  const handleWishlistToggle = (e) => {
+   const handleWishlistToggle = (e) => {
     e.preventDefault();
     
     if (isInWishlist) {
       dispatch(removeFromWishlist(product.id));
+      toast.wishlist('Removed from wishlist');
     } else {
       dispatch(addToWishlist(product));
+      toast.wishlist('Added to wishlist!');
     }
   };
 
   // Handle add to cart
-  const handleAddToCart = (e) => {
+   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
     
@@ -51,12 +55,12 @@ function ProductCard({ product, variant = 'grid' }) {
         stock: product.stock
       }));
       
-      // Show feedback
+      toast.cart(`${product.name} added to cart!`);
+      
       setAddedToCart(true);
       setTimeout(() => setAddedToCart(false), 2000);
     }
   };
-
   // Featured variant - simpler layout for homepage
       if (variant === 'featured') {
     return (
