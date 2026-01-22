@@ -24,8 +24,8 @@ function ProductDetailPage() {
   const { productId } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  
-  const [product, setProduct] = useState(null);
+  const product = productItems.find(p => p.id === productId);
+
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
   const [addedToCart, setAddedToCart] = useState(false);
@@ -37,14 +37,10 @@ function ProductDetailPage() {
 
   // Find product
   useEffect(() => {
-    const foundProduct = productItems.find(p => p.id === productId);
-    if (foundProduct) {
-      setProduct(foundProduct);
-    } else {
-      // Product not found, redirect to 404
+    if (!product) {
       navigate('/404');
     }
-  }, [productId, navigate]);
+  }, [product, navigate]);
 
   // Get related products (same category, different product)
   const relatedProducts = productItems
@@ -192,8 +188,8 @@ function ProductDetailPage() {
 
             {/* Price */}
             <div className="mb-6">
-              <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-4xl font-bold text-gray-900">
+              <div className="flex flex-col items-baseline gap-3 mb-2">
+                <span className="text-3xl font-bold text-gray-900">
                   ₦{priceInNaira.toLocaleString()}
                 </span>
                 {originalPriceInNaira && (

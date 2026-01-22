@@ -45,7 +45,7 @@ function CartPage() {
           {cartItems.length > 0 && (
             <button
               onClick={handleClearCart}
-              className="text-red-600 hover:text-red-700 font-medium flex items-center gap-2"
+              className="text-red-600 hover:text-red-700 font-medium flex items-center mt-10 gap-2"
             >
               <Trash2 size={18} />
               Clear Cart
@@ -118,7 +118,7 @@ function CartPage() {
                         </button>
                       </div>
 
-                      <div className="flex items-center justify-between mt-4">
+                      <div className="flex flex-col md:flex md:flex-row lg:flex lg:flex-row items-center justify-between mt-4">
                         {/* Quantity Controls */}
                         <div className="flex items-center gap-3">
                           <button
@@ -151,8 +151,8 @@ function CartPage() {
                         </div>
 
                         {/* Price */}
-                        <div className="text-right">
-                          <p className="text-lg font-bold text-gray-900">
+                        <div className="mt-4 lg:text-right">
+                          <p className="text-base font-bold text-gray-900">
                             ₦{(item.price * item.quantity).toLocaleString()}
                           </p>
                           <p className="text-sm text-gray-500">
