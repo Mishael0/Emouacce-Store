@@ -210,7 +210,7 @@ function ProductCard({ product, variant = 'grid' }) {
         <button
           disabled={!product.inStock}
           onClick={handleAddToCart}
-          className={`w-full flex text-sm items-center justify-center gap-2 py-1 px-3 rounded-lg mt-auto font-medium transition-all ${
+          className={`w-full flex text-sm items-center justify-center gap-2 py-1 px-2 rounded-lg mt-auto font-medium transition-all ${
             product.inStock
               ? addedToCart
                 ? 'bg-green-600 text-white'
