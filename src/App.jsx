@@ -11,10 +11,12 @@ import WishlistPage from "./pages/WishlistPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import AccountPage from "./pages/AccountPage";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<CartPage />} />
@@ -32,9 +34,10 @@ function App() {
         <Route path="/products/all" element={<AllProductsPage />} />
         
         {/* Category Routes */}
-        <Route path="/products/:category" element={<CategoryPage />} />
-        <Route path="/products/:category/:subcategory" element={<CategoryPage />} />
         <Route path="/products/:category/:subcategory/:productId" element={<ProductDetailPage />} />
+        <Route path="/products/:category/:subcategory" element={<CategoryPage />} />
+        <Route path="/products/:category" element={<CategoryPage />} />
+        
         
         {/* 404 */}
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />

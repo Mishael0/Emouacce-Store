@@ -340,7 +340,7 @@ function CheckoutPage() {
                 </h2>
 
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center text-sm gap-4">
                     <label className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
@@ -468,8 +468,8 @@ function CheckoutPage() {
                       <p className="text-sm text-gray-700 mb-2">
                         <strong>Bank Details:</strong>
                       </p>
-                      <p className="text-sm text-gray-600">Bank: GTBank</p>
-                      <p className="text-sm text-gray-600">Account Number: 0123456789</p>
+                      <p className="text-sm text-gray-600">Bank: Access</p>
+                      <p className="text-sm text-gray-600">Account Number: 009636625</p>
                       <p className="text-sm text-gray-600">Account Name: EMOUACCE Store</p>
                     </div>
                   )}

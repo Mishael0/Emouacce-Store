@@ -24,7 +24,7 @@ function ProductDetailPage() {
   const { productId } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const product = productItems.find(p => p.id === productId);
+  const product = productItems.find(p => String(p.id) === String(productId));
 
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
