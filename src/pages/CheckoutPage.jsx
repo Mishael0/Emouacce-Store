@@ -350,7 +350,7 @@ function CheckoutPage() {
                         onChange={handleChange}
                         className="w-4 h-4 text-yellow-800"
                       />
-                      <span>Credit/Debit Card</span>
+                      <span className="text-xs">Credit/Debit Card</span>
                     </label>
 
                     <label className="flex items-center gap-2 cursor-pointer">
@@ -362,7 +362,7 @@ function CheckoutPage() {
                         onChange={handleChange}
                         className="w-4 h-4 text-yellow-800"
                       />
-                      <span>Bank Transfer</span>
+                      <span className="text-xs">Bank Transfer</span>
                     </label>
 
                     <label className="flex items-center gap-2 cursor-pointer">
@@ -374,7 +374,7 @@ function CheckoutPage() {
                         onChange={handleChange}
                         className="w-4 h-4 text-yellow-800"
                       />
-                      <span>Cash on Delivery</span>
+                      <span className="text-xs">Cash on Delivery</span>
                     </label>
                   </div>
 
